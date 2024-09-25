@@ -1,7 +1,7 @@
-diff --git a/arch/arm64/configs/gki_defconfig b/arch/arm64/configs/gki_defconfig
+diff --git a/common/arch/arm64/configs/gki_defconfig b/common/arch/arm64/configs/gki_defconfig
 index 29e7bba5a7f2..e4628cfcaa17 100644
---- a/arch/arm64/configs/gki_defconfig
-+++ b/arch/arm64/configs/gki_defconfig
+--- a/common/arch/arm64/configs/gki_defconfig
++++ b/common/arch/arm64/configs/gki_defconfig
 @@ -1,10 +1,13 @@
  CONFIG_UAPI_HEADER_TEST=y
 +CONFIG_SYSVIPC=y
@@ -81,10 +81,10 @@ index 29e7bba5a7f2..e4628cfcaa17 100644
  CONFIG_CRYPTO_MD5=y
  CONFIG_CRYPTO_DES=y
  CONFIG_CRYPTO_LZO=y
-diff --git a/include/linux/android_kabi.h b/include/linux/android_kabi.h
+diff --git a/common/include/linux/android_kabi.h b/common/include/linux/android_kabi.h
 index f6dd7f00b386..428537dce114 100644
---- a/include/linux/android_kabi.h
-+++ b/include/linux/android_kabi.h
+--- a/common/include/linux/android_kabi.h
++++ b/common/include/linux/android_kabi.h
 @@ -113,5 +113,10 @@
  #define ANDROID_KABI_USE2(number, _new1, _new2)			\
  	_ANDROID_KABI_REPLACE(_ANDROID_KABI_RESERVE(number), struct{ _new1; _new2; })
@@ -96,10 +96,10 @@ index f6dd7f00b386..428537dce114 100644
 +	, _new)
  
  #endif /* _ANDROID_KABI_H */
-diff --git a/include/linux/netdevice.h b/include/linux/netdevice.h
+diff --git a/common/include/linux/netdevice.h b/common/include/linux/netdevice.h
 index f68ba57131ee..0c8aaceb2b7a 100644
---- a/include/linux/netdevice.h
-+++ b/include/linux/netdevice.h
+--- a/common/include/linux/netdevice.h
++++ b/common/include/linux/netdevice.h
 @@ -2077,9 +2077,6 @@ struct net_device {
  	struct iw_public_data	*wireless_data;
  #endif
@@ -122,10 +122,10 @@ index f68ba57131ee..0c8aaceb2b7a 100644
  	ANDROID_KABI_RESERVE(2);
  	ANDROID_KABI_RESERVE(3);
  	ANDROID_KABI_RESERVE(4);
-diff --git a/include/linux/sched.h b/include/linux/sched.h
+diff --git a/common/include/linux/sched.h b/common/include/linux/sched.h
 index 14d1a707b0ee..86eea77193e2 100644
---- a/include/linux/sched.h
-+++ b/include/linux/sched.h
+--- a/common/include/linux/sched.h
++++ b/common/include/linux/sched.h
 @@ -1077,10 +1077,6 @@ struct task_struct {
  
  	struct nameidata		*nameidata;
@@ -152,10 +152,10 @@ index 14d1a707b0ee..86eea77193e2 100644
  	ANDROID_KABI_RESERVE(4);
  	ANDROID_KABI_RESERVE(5);
  	ANDROID_KABI_RESERVE(6);
-diff --git a/include/net/netns/ipv4.h b/include/net/netns/ipv4.h
+diff --git a/common/include/net/netns/ipv4.h b/common/include/net/netns/ipv4.h
 index 9ee19a5e8669..da58f10cb768 100644
---- a/include/net/netns/ipv4.h
-+++ b/include/net/netns/ipv4.h
+--- a/common/include/net/netns/ipv4.h
++++ b/common/include/net/netns/ipv4.h
 @@ -100,9 +100,6 @@ struct netns_ipv4 {
  	/* Shall we try to damage output packets if routing dev changes? */
  	u8 sysctl_ip_dynaddr;

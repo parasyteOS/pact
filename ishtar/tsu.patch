@@ -1,7 +1,7 @@
-diff --git a/drivers/Kconfig b/drivers/Kconfig
+diff --git a/common/drivers/Kconfig b/common/drivers/Kconfig
 index 0d399ddaa185..a4c76130a4ee 100644
---- a/drivers/Kconfig
-+++ b/drivers/Kconfig
+--- a/common/drivers/Kconfig
++++ b/common/drivers/Kconfig
 @@ -236,4 +236,6 @@ source "drivers/interconnect/Kconfig"
  source "drivers/counter/Kconfig"
  
@@ -9,10 +9,10 @@ index 0d399ddaa185..a4c76130a4ee 100644
 +
 +source "drivers/terminalsu/Kconfig"
  endmenu
-diff --git a/drivers/Makefile b/drivers/Makefile
+diff --git a/common/drivers/Makefile b/common/drivers/Makefile
 index a110338c860c..d21697addbd0 100644
---- a/drivers/Makefile
-+++ b/drivers/Makefile
+--- a/common/drivers/Makefile
++++ b/common/drivers/Makefile
 @@ -187,3 +187,4 @@ obj-$(CONFIG_GNSS)		+= gnss/
  obj-$(CONFIG_INTERCONNECT)	+= interconnect/
  obj-$(CONFIG_COUNTER)		+= counter/

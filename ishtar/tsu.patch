@@ -18,3 +18,15 @@ index a110338c860c..d21697addbd0 100644
  obj-$(CONFIG_COUNTER)		+= counter/
  obj-$(CONFIG_MOST)		+= most/
 +obj-$(CONFIG_TSU) += terminalsu/
+diff --git a/common/arch/arm64/configs/gki_defconfig b/common/arch/arm64/configs/gki_defconfig
+index 29e7bba5a7f2..be3a59e02405 100644
+--- a/common/arch/arm64/configs/gki_defconfig
++++ b/common/arch/arm64/configs/gki_defconfig
+@@ -660,6 +660,7 @@ CONFIG_STATIC_USERMODEHELPER=y
+ CONFIG_STATIC_USERMODEHELPER_PATH=""
+ CONFIG_SECURITY_SELINUX=y
+ CONFIG_INIT_ON_ALLOC_DEFAULT_ON=y
++CONFIG_CRYPTO_ECDSA=y
+ CONFIG_CRYPTO_CHACHA20POLY1305=y
+ CONFIG_CRYPTO_ADIANTUM=y
+ CONFIG_CRYPTO_XCBC=y

@@ -69,6 +69,14 @@ index 29e7bba5a7f2..e4628cfcaa17 100644
  # CONFIG_EFIVAR_FS is not set
  CONFIG_PSTORE=y
  CONFIG_PSTORE_CONSOLE=y
+@@ -664,10 +676,9 @@ CONFIG_STATIC_USERMODEHELPER=y
+ CONFIG_CRYPTO_CHACHA20POLY1305=y
+ CONFIG_CRYPTO_ADIANTUM=y
+ CONFIG_CRYPTO_XCBC=y
+-CONFIG_CRYPTO_BLAKE2B=y
+ CONFIG_CRYPTO_MD5=y
+ CONFIG_CRYPTO_DES=y
+ CONFIG_CRYPTO_LZO=y
 diff --git a/common/include/linux/android_kabi.h b/common/include/linux/android_kabi.h
 index f6dd7f00b386..428537dce114 100644
 --- a/common/include/linux/android_kabi.h

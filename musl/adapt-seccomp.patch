@@ -1,14 +1,14 @@
---- a/src/unistd/faccessat.c    2022-04-08 01:12:40.000000000 +0800
-+++ b/src/unistd/faccessat.c    2024-09-30 17:33:36.354123930 +0800
+--- a/src/unistd/faccessat.c	2022-04-08 01:12:40.000000000 +0800
++++ b/src/unistd/faccessat.c	2024-10-02 11:25:58.436088189 +0800
 @@ -25,11 +25,6 @@
  
  int faccessat(int fd, const char *filename, int amode, int flag)
  {
--       if (flag) {
--               int ret = __syscall(SYS_faccessat2, fd, filename, amode, flag);
--               if (ret != -ENOSYS) return __syscall_ret(ret);
--       }
+-	if (flag) {
+-		int ret = __syscall(SYS_faccessat2, fd, filename, amode, flag);
+-		if (ret != -ENOSYS) return __syscall_ret(ret);
+-	}
 -
-        if (flag & ~AT_EACCESS)
-                return __syscall_ret(-EINVAL);
-
+ 	if (flag & ~AT_EACCESS)
+ 		return __syscall_ret(-EINVAL);
+ 
